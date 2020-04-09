@@ -1,0 +1,34 @@
+﻿body {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 75px;
+    padding: 100px;
+    text-align: center;
+    border: solid 4px;
+    border-style: dashed;
+    background-color: black;
+    color:antiquewhite;
+}
+input {
+    margin-bottom: 10px;
+}
+a {
+    color: antiquewhite;
+}
+
+input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+td {
+    /*padding-right: 10px;
+    padding-left: 10px;*/
+    color: antiquewhite;
+}
+
+th {
+    color: antiquewhite;
+}

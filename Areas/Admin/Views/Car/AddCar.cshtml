@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "AddCar";
+}
+
+<h1>AddCar</h1>
+
+<form asp-action="AddCar" method="post">
+    <div class="text-danger">@Validation.errorMessage</div>
+
+    <label>Make/Model: </label><br />
+    <input type="text" name="makeModel" value="Buick Awesome-O" /><br />
+    <label>Year: </label><br />
+    <input type="text" name="year" value="1998" /><br />
+    <label>Color: </label><br />
+    <input type="text" name="color" value="Red" /><br />
+    <label>Price: </label><br />
+    <input type="text" name="price" value="123123" /><br />
+    <label>Milage: </label><br />
+    <input type="text" name="mileage" value="112312" /><br />
+    <button type="submit">Search</button>
+</form>

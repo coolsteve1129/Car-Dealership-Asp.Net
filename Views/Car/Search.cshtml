@@ -1,0 +1,12 @@
+﻿@model Validation
+@{
+    ViewBag.Title = "Search";
+}
+
+<form asp-action="Search" method="post">
+    <div class="text-danger">@Validation.errorMessage</div>
+
+    <label>Search by Make/Model: </label><br />
+    <input type="text" name="id"/><br />
+    <button type="submit">Search</button>
+</form>

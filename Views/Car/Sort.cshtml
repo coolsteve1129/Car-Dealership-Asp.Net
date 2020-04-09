@@ -1,0 +1,57 @@
+﻿@model List<Car>
+@{
+    ViewBag.Title = "Car List";
+}
+
+<h1>Car List</h1>
+<label>Sort By: </label>
+<a asp-controller="Car" asp-action="Sort"
+   asp-route-id="@SortOrder.sortByYear">
+    Year
+</a>
+<a asp-controller="Car" asp-action="Sort"
+   asp-route-id="@SortOrder.sortByColor">
+    Color
+</a>
+
+<a asp-controller="Car" asp-action="Sort"
+   asp-route-id="@SortOrder.sortByMake">
+    Make/Model
+</a>
+<a asp-controller="Car" asp-action="Sort"
+   asp-route-id="@SortOrder.sortByMileage">
+    Mileage
+</a>
+<a asp-controller="Car" asp-action="Sort"
+   asp-route-id="@SortOrder.sortByPrice">
+    Price
+</a>
+<table class="table table-bordered table-striped text-center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Make/Model</th>
+            <th>Mileage</th>
+            <th>Price</th>
+            <th>Year</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in @Model)
+        {
+            <tr>
+                <td>@car.ID</td>
+                <td>@car.MakeModel</td>
+                <td>@car.Mileage</td>
+                <td>@car.Price</td>
+                <td>@car.Year</td>
+                <td>@car.Color</td>
+                <td>
+                    <a asp-controller="Car" asp-action="Detail"
+                        asp-route-id="@car.Slug">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

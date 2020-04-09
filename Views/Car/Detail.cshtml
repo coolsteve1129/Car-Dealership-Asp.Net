@@ -1,0 +1,37 @@
+﻿@model Car
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h1>Car Detail</h1>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Id: </td>
+        <td>@Model.ID</td>
+    </tr>
+    <tr>
+        <td>Make/Model: </td>
+        <td>@Model.MakeModel</td>
+    </tr>
+    <tr>
+        <td>Year: </td>
+        <td>@Model.Year</td>
+    </tr>
+    <tr>
+        <td>Milage: </td>
+        <td>@Model.Mileage</td>
+    </tr>
+
+    <tr>
+        <td>Color: </td>
+        <td>@Model.Color</td>
+    </tr>
+    <tr>
+        <td>Price: </td>
+        <td>@Model.Price</td>
+    </tr>
+</table>
+<br />
+<div>
+    <a class="Homelink" asp-controller="Home" asp-action="Index">Home</a>
+</div>
